@@ -1,0 +1,100 @@
+.crumb .item{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+.crumb .step{
+    padding: 0 10px;
+}
+.reg_con{
+    margin-bottom: 50px;
+}
+.reg_from{
+    float: left;
+    border: 1px solid #ddd;
+}
+.reg_from .tit{
+    padding: 35px;
+    font-size: 18px;
+    line-height: 30px;
+}
+.reg_from .tit p{
+    background: url(../images/login_ico.png) no-repeat;
+    padding-left: 45px;
+}
+.reg_from .tit p.icon_phone{
+    background-position: 0 0;
+}
+.reg_from .tit p.icon_user{
+    background-position: 0 -62px;
+}
+.reg_from .reg_box{
+    padding: 0 30px;
+}
+.reg_from .reg_box dl{
+    padding: 7px 0;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    width: 398px;
+}
+.reg_from .reg_box dl input{
+    border: 0;
+    width: 240px;
+    height: 28px;
+    line-height: 28px;
+    outline: 0;
+}
+.reg_from .reg_box span{
+    width: 100px;
+    float: left;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    margin-right: 10px;
+}
+.reg_from .choose{
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+}
+.reg_from .choose input{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.reg_from .choose a,.reg_from .word a{
+    color: #8ab700;
+}
+.reg_from .reg_box .reg_btn{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.reg_from .reg_box .reg_btn a{
+    display: block;
+    color: #fff;
+    background: #ff6900;
+    height: 58px;
+    line-height: 58px;
+    font-size: 20px;
+    text-align: center;
+}
+.reg_from .reg_box .reg_btn a.disable{
+    background: #bbb;
+}
+.reg_from .word{
+    text-align: right;
+    padding-bottom: 25px;
+    font-size: 14px;
+}
+.reg_banner{
+    float: right;
+}
+@media screen and (max-width:1024px) {
+    .reg_banner{
+        width: 50%;
+    }
+    .reg_banner img{
+        width: 100%;
+    }
+}

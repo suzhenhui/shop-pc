@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .stage{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #4a96ee;
+            overflow: hidden;
+        }
+        .sheep{
+            position: absolute;
+            width: 164px;
+            height: 122px;
+            right: -164px;
+            bottom: 0;
+            background-image: url('sheep.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="stage">
+        <div class="sheep"></div>
+    </div>
+</body>
+    <script>
+        /*
+        var num=0, //移动的个数
+            cot = 0, //移动的距离
+            speed = 5,
+            sheep=document.getElementsByClassName('sheep')[0];
+        var sheepAnimate = setInterval(function () {
+            num = num + 164;
+            if(num==1312){
+                num=0;
+            }
+            sheep.style.backgroundPosition = -num + 'px '+0+'px'
+        },150)
+
+        var sheepRun = setInterval(function () {
+            cot=sheep.offsetLeft - speed;
+            if(cot<= -164){
+                clearInterval(sheepRun)
+            }
+            sheep.style.left = cot+'px';
+        },150)
+        */
+
+        //小羊动画
+        (function () {
+            var obj={
+                frequency: 70,//协调频率
+                stage:document.getElementsByClassName('stage')[0],
+                num: 0,
+                cot:0,
+                speed: 7
+            }
+
+            function Sheep(data) {
+                this.sheep = document.createElement('div');
+                data.stage.appendChild(this.sheep);
+                this.sheep.class = 'sheep';
+                this.frequencyNum = Math.floor(Math.random()*data.frequency)+30;
+                this.sheepWidth = this.sheep.offsetWidth;
+                this.cot=data.cot;
+                this.num = data.num;
+                this.speed=data.speed;
+                this.top=0;
+            }
+            
+            init()
+            function init() {
+                createSheep()
+            }
+            function createSheep() {
+                var timer = setInterval(function () {
+                    var sheep = new Sheep(obj)
+                },2000)
+
+                sheepRun(sheep);
+            }
+
+            function sheepRun(newS) {
+
+                var sheepAnimate = setInterval(function () {
+                    newS.num = newS.num + newS.sheepWidth;
+                    if(newS.num==newS.sheepWidth*8){
+                        newS.num=0;
+                    }
+                    newS.sheep.style.backgroundPosition = -newS.num + 'px '+newS.top+'px'
+                },newS.frequencyNum)
+
+                var sheepRun = setInterval(function () {
+                    newS.cot=newS.sheep.offsetLeft - newS.speed;
+                    if(newS.cot<= -newS.sheepWidth){
+                        clearInterval(sheepRun)
+                    }
+                    sheep.style.left = cot+'px';
+                },150)
+
+            }
+
+
+
+
+
+        })()
+    </script>
+</html>
